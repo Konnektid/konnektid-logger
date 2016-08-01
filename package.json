@@ -1,0 +1,29 @@
+{
+  "name": "konnektid-logger",
+  "description": "A module for logging events, logging errors and debugging in Konnektid",
+  "main": "dist/index.js",
+  "author": "Simone Potenza",
+  "version": "0.1.0",
+  "scripts": {
+    "eslint": "eslint src",
+    "build": "babel src --out-dir dist --ignore $npm_package_config_buildignore --source-maps --copy-files",
+    "test": "babel-node node_modules/.bin/babel-istanbul cover --root src/ --include-all-sources _mocha -- --timeout 10000 --recursive $(find src -name __test__ -not -path '*/node_modules/*')"
+  },
+  "config": {
+    "buildignore": "__test__"
+  },
+  "dependencies": {
+    "babel-preset-konnektid": "github:konnektid/babel-preset-konnektid"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-istanbul": "^0.11.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.2.0",
+    "eslint-config-konnektid": "github:konnektid/eslint-config-konnektid",
+    "eslint-plugin-babel": "^3.3.0",
+    "istanbul": "^0.3.19",
+    "mocha": "^2.5.3"
+  }
+}
