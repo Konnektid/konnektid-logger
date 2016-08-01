@@ -1,3 +1,3 @@
-# javascript/node module boilerplate
+# konnektid-logger
 
-Opinionated javascript template to build module in javascript and module. This boilerplate is used internally at Konnektid in its own code.
+A module for logging events, logging errors and debugging in Konnektid
